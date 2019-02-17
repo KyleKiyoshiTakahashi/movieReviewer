@@ -1,0 +1,19 @@
+
+
+{{ nameErrorMessage | json }}
+{{ titleErrorMessage | json }}
+{{ starsErrorMessage | json }}
+{{ reviewErrorMessage | json }}
+<button class='btn' (click)='cancelCreate()'>Home</button>
+<div>
+  <h3>Submit A Movie and Your Review</h3>
+  <form (submit)="onNewMovieSubmit()">
+  <p>Movie Title: <input type="text" name="newMovie.title" [(ngModel)]="newMovie.title"></p>
+  <p>Your Name: <input type="text" name="newMovie.name" [(ngModel)]="newMovie.name"></p>
+  <p>Stars: <input type="number" name="newMovie.stars" [(ngModel)]="newMovie.stars"></p>
+  <p>Your Review: <input type="text" name="newMovie.review" [(ngModel)]="newMovie.review"></p>
+  <input type="submit" value="Submit">
+
+</form>
+<button class='btn' (click)='cancelCreate()'>Cancel</button>
+</div>
